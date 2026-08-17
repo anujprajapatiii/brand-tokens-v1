@@ -1,0 +1,60 @@
+name: Deploy landing page
+
+on:
+  push:
+    # The feature branch is listed so the page deploys before the merge; drop it
+    # from this list once the branch is merged into main.
+    branches:
+      - main
+      - claude/sample-landing-page-tokens-48rsx3
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Regenerate tokens from sample-tokens.json
+        run: node build.mjs
+
+      - name: Fail if the committed build is stale
+        run: git diff --exit-code -- docs/
+
+      - name: Verify every token is declared, resolved, and rendered
+        run: node check.mjs
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          # Turns Pages on (and switches the source to Actions) if it is not
+          # already configured that way, so this needs no manual setup.
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

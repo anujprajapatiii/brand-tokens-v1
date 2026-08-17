@@ -16,13 +16,16 @@ Design tokens for Universal Branding, plus a sample landing page that consumes a
 | `docs/tokens.css` | **Generated.** All 210 tokens as custom properties. |
 | `docs/token-data.js` | **Generated.** Token inventory for the reference section. |
 | `docs/reference.js` | Renders the reference appendix from that inventory. |
+| `.github/workflows/pages.yml` | Builds, verifies, and deploys `docs/` to GitHub Pages. |
 
 ```
 node build.mjs   # regenerate docs/tokens.css and docs/token-data.js
 node check.mjs   # verify coverage
 ```
 
-Re-run both after editing `sample-tokens.json`.
+Re-run both after editing `sample-tokens.json`. CI runs `build.mjs`, fails the job if
+the committed output is stale (`git diff --exit-code -- docs/`), runs `check.mjs`, and
+then deploys — so a token change that isn't rebuilt cannot reach the published page.
 
 ## Token coverage
 

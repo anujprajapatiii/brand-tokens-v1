@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meridian — a sample landing page built from brand-tokens-v1</title>
+    <meta
+      name="description"
+      content="A sample landing page that consumes every one of the 210 design tokens in brand-tokens-v1, plus a generated reference for the full set."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23595551'/><path d='M9 22V10l7 8 7-8v12' stroke='%23fff' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+      <defs>
+        <g id="i" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></g>
+      </defs>
+      <symbol id="ico-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="ico-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M12 11v5m0-8.5v.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+      <symbol id="ico-warn" viewBox="0 0 24 24"><path d="M12 4 2.5 20h19L12 4Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="M12 10v4m0 2.5v.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+      <symbol id="ico-error" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="m9 9 6 6m0-6-6 6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+      <symbol id="ico-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="m3 13 9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
+      <symbol id="ico-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.75"/><circle cx="6" cy="19" r="2.5" fill="none" stroke="currentColor" stroke-width="1.75"/><circle cx="18" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M6 7.5v9m0-3h6a6 6 0 0 0 6-4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+      <symbol id="ico-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
+      <symbol id="ico-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="m16 16 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+      <symbol id="ico-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="m3.5 7 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+      <symbol id="ico-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.75"/></symbol>
+      <symbol id="ico-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="ico-dot" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" fill="currentColor"/></symbol>
+    </svg>
+
+    <header class="masthead">
+      <div class="shell masthead-inner">
+        <a class="wordmark" href="#">
+          <span class="wordmark-mark">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V6l7 8 7-8v13" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Meridian
+        </a>
+        <nav class="masthead-nav" aria-label="Primary">
+          <a href="#platform">Platform</a>
+          <a href="#states">States</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#tokens">Token reference</a>
+        </nav>
+        <a
+          class="icon-btn"
+          href="https://github.com/anujprajapatiii/brand-tokens-v1"
+          aria-label="Source repository"
+        >
+          <svg width="18" height="18" aria-hidden="true"><use href="#ico-branch" /></svg>
+        </a>
+        <a class="btn btn-dark" href="#cta">
+          Start free
+          <svg width="16" height="16" aria-hidden="true"><use href="#ico-arrow" /></svg>
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ------------------------------------------------------------ Hero -->
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div>
+            <span class="pill">
+              <span class="pill-dot"></span>
+              brand-tokens-v1 · 210 tokens live
+            </span>
+            <h1>One palette. Every surface, <em>already decided.</em></h1>
+            <p class="hero-lede">
+              Meridian turns your Figma variable collections into typed, versioned tokens your
+              apps can actually import — aliases resolved, states included, drift caught in review.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-accent" href="#cta">
+                Connect a library
+                <svg width="16" height="16" aria-hidden="true"><use href="#ico-arrow" /></svg>
+              </a>
+              <a class="btn btn-outline" href="#tokens">Browse the token set</a>
+            </div>
+            <p class="hero-note">No card required · Resolves aliases across collections and modes</p>
+          </div>
+
+          <div class="pipeline" aria-hidden="true">
+            <div class="pipeline-bar">
+              <svg width="14" height="14"><use href="#ico-branch" /></svg>
+              sample-tokens.json → tokens.css
+            </div>
+            <div class="pipeline-step">
+              <span class="pipeline-swatches">
+                <span style="background: var(--primitive-brown-50)"></span>
+                <span style="background: var(--primitive-brown-200)"></span>
+                <span style="background: var(--primitive-brown-400)"></span>
+              </span>
+              <span>
+                <code>bg.accent-solid</code>
+                <small>VariableID:75:133</small>
+              </span>
+              <span class="pipeline-tag">resolved</span>
+            </div>
+            <div class="pipeline-step">
+              <span class="pipeline-swatches">
+                <span style="background: var(--primitive-blue-100)"></span>
+                <span style="background: var(--primitive-blue-400)"></span>
+                <span style="background: var(--primitive-blue-600)"></span>
+              </span>
+              <span>
+                <code>text.info-primary</code>
+                <small>VariableID:75:145</small>
+              </span>
+              <span class="pipeline-tag">resolved</span>
+            </div>
+            <div class="pipeline-step">
+              <span class="pipeline-swatches">
+                <span style="background: var(--primitive-yellow-200)"></span>
+                <span style="background: var(--primitive-yellow-400)"></span>
+                <span style="background: var(--primitive-yellow-600)"></span>
+              </span>
+              <span>
+                <code>bg.warning-secondary</code>
+                <small>VariableID:75:157</small>
+              </span>
+              <span class="pipeline-tag">resolved</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------- Trust -->
+      <div class="trust">
+        <div class="shell trust-inner">
+          <p>Shipping design systems at</p>
+          <ul>
+            <li>Northwind</li>
+            <li>Kestrel</li>
+            <li>Lumen Labs</li>
+            <li>Ardent</li>
+            <li>Foxglove</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- -------------------------------------------------------- Platform -->
+      <section class="section" id="platform">
+        <div class="shell">
+          <div class="section-head">
+            <span class="eyebrow">The platform</span>
+            <h2>Tokens that survive the trip from Figma to production</h2>
+            <p>
+              An export is not a design system. Meridian resolves the alias graph, holds the
+              contract in version control, and tells you the moment a value moves underneath you.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="card">
+              <span class="card-icon"><svg width="20" height="20"><use href="#ico-layers" /></svg></span>
+              <h3>Alias resolution</h3>
+              <p>
+                Semantic layers point at primitives by variable id. Meridian walks the graph and
+                emits flat, ready-to-ship values — no dangling references, no guesswork.
+              </p>
+              <dl>
+                <div><dt>Aliases</dt><dd>106</dd></div>
+                <div><dt>Depth</dt><dd>2</dd></div>
+              </dl>
+            </article>
+
+            <article class="card">
+              <span class="card-icon"><svg width="20" height="20"><use href="#ico-branch" /></svg></span>
+              <h3>Versioned contracts</h3>
+              <p>
+                Every publish is a commit. Diff two releases, see exactly which surfaces moved,
+                and block a merge when a token silently changes meaning.
+              </p>
+              <dl>
+                <div><dt>Collections</dt><dd>15</dd></div>
+                <div><dt>Drift</dt><dd>0</dd></div>
+              </dl>
+            </article>
+
+            <article class="card">
+              <span class="card-icon"><svg width="20" height="20"><use href="#ico-zap" /></svg></span>
+              <h3>State coverage</h3>
+              <p>
+                Default, hover, disabled, and every status tone ship together, so an engineer
+                never has to invent the shade that the design file forgot.
+              </p>
+              <dl>
+                <div><dt>States</dt><dd>62</dd></div>
+                <div><dt>Families</dt><dd>4</dd></div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------- States -->
+      <section class="section" id="states">
+        <div class="shell">
+          <div class="section-head">
+            <span class="eyebrow">Feedback system</span>
+            <h2>Four status families, two weights, all their hover states</h2>
+            <p>
+              Each tone below is drawn entirely from its own token family — the tint variant uses
+              <code>-primary</code>, the solid variant uses <code>-secondary</code>, and hovering
+              any card swaps in the matching <code>-hover</code> value.
+            </p>
+          </div>
+
+          <div class="status-grid">
+            <div class="status-col">
+              <h3>Informational <span>info · blue</span></h3>
+              <div class="alert alert-info">
+                <span class="alert-icon"><svg width="20" height="20"><use href="#ico-info" /></svg></span>
+                <div>
+                  <strong>A new library version is available</strong>
+                  <p>brand-tokens-v1.4 adds two surfaces and renames one border token.</p>
+                </div>
+              </div>
+              <div class="banner banner-info">
+                <span class="banner-icon"><svg width="18" height="18"><use href="#ico-info" /></svg></span>
+                Sync scheduled for 04:00 UTC
+                <span class="banner-meta">bg.info-secondary</span>
+              </div>
+            </div>
+
+            <div class="status-col">
+              <h3>Success <span>success · green</span></h3>
+              <div class="alert alert-success">
+                <span class="alert-icon"><svg width="20" height="20"><use href="#ico-check" /></svg></span>
+                <div>
+                  <strong>All 210 tokens resolved</strong>
+                  <p>Every alias found a target. The build is safe to publish.</p>
+                </div>
+              </div>
+              <div class="banner banner-success">
+                <span class="banner-icon"><svg width="18" height="18"><use href="#ico-check" /></svg></span>
+                Published to 6 consumers
+                <span class="banner-meta">bg.success-secondary</span>
+              </div>
+            </div>
+
+            <div class="status-col">
+              <h3>Warning <span>warning · yellow</span></h3>
+              <div class="alert alert-warning">
+                <span class="alert-icon"><svg width="20" height="20"><use href="#ico-warn" /></svg></span>
+                <div>
+                  <strong>9 primitives are unreferenced</strong>
+                  <p>The whole amber ramp plus four odd shades are not used by any semantic token.</p>
+                </div>
+              </div>
+              <div class="banner banner-warning">
+                <span class="banner-icon"><svg width="18" height="18"><use href="#ico-warn" /></svg></span>
+                Review before the next release
+                <span class="banner-meta">bg.warning-secondary</span>
+              </div>
+            </div>
+
+            <div class="status-col">
+              <h3>Error <span>error · red</span></h3>
+              <div class="alert alert-error">
+                <span class="alert-icon"><svg width="20" height="20"><use href="#ico-error" /></svg></span>
+                <div>
+                  <strong>Seven ramps exported as #ffffff</strong>
+                  <p>The root-level colour ramps lost their values on export. Details below.</p>
+                </div>
+              </div>
+              <div class="banner banner-error">
+                <span class="banner-icon"><svg width="18" height="18"><use href="#ico-error" /></svg></span>
+                Blocking publish for 1 collection
+                <span class="banner-meta">bg.error-secondary</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="tone-list">
+            <li><span class="tone-icon-info"><svg width="16" height="16"><use href="#ico-dot" /></svg></span><span class="tone-info">Informational body copy on a neutral surface</span><code>text.info-secondary</code></li>
+            <li><span class="tone-icon-success"><svg width="16" height="16"><use href="#ico-dot" /></svg></span><span class="tone-success">Confirmation copy for a completed action</span><code>text.success-secondary</code></li>
+            <li><span class="tone-icon-warning"><svg width="16" height="16"><use href="#ico-dot" /></svg></span><span class="tone-warning">Cautionary copy that stops short of failure</span><code>text.warning-secondary</code></li>
+            <li><span class="tone-icon-error"><svg width="16" height="16"><use href="#ico-dot" /></svg></span><span class="tone-error">Failure copy paired with a recovery action</span><code>text.error-secondary</code></li>
+            <li><span class="tone-icon-accent"><svg width="16" height="16"><use href="#ico-dot" /></svg></span><span class="tone-accent">Brand-accented copy for emphasis</span><code>text.accent-secondary</code></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------- Forms -->
+      <section class="section" id="forms">
+        <div class="shell">
+          <div class="section-head">
+            <span class="eyebrow">Input states</span>
+            <h2>Placeholder, disabled, read-only, and both validation tones</h2>
+            <p>
+              The states designers most often forget are the ones the token set covers first.
+              Nothing here is a hand-mixed shade.
+            </p>
+          </div>
+
+          <div class="form-layout">
+            <form class="form-panel" onsubmit="return false">
+              <div class="field">
+                <label for="f-email">Work email</label>
+                <div class="control">
+                  <span class="control-icon"><svg width="18" height="18"><use href="#ico-mail" /></svg></span>
+                  <input id="f-email" type="email" placeholder="you@company.com" />
+                </div>
+                <p class="field-hint">We only use this to send the library invite.</p>
+              </div>
+
+              <div class="field">
+                <label for="f-lib">Library name</label>
+                <div class="control is-error">
+                  <span class="control-icon"><svg width="18" height="18"><use href="#ico-error" /></svg></span>
+                  <input id="f-lib" type="text" value="brand tokens v1" />
+                </div>
+                <p class="field-hint is-error">Names must be lowercase and hyphenated.</p>
+              </div>
+
+              <div class="field">
+                <label for="f-slug">Resolved slug</label>
+                <div class="control is-success">
+                  <span class="control-icon"><svg width="18" height="18"><use href="#ico-check" /></svg></span>
+                  <input id="f-slug" type="text" value="brand-tokens-v1" />
+                </div>
+                <p class="field-hint is-info">Available across all six consumers.</p>
+              </div>
+
+              <div class="field">
+                <label for="f-org">Organisation (locked to your plan)</label>
+                <div class="control is-disabled">
+                  <span class="control-icon"><svg width="18" height="18"><use href="#ico-lock" /></svg></span>
+                  <input id="f-org" type="text" value="Upgrade to change" disabled />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="f-id">Collection id</label>
+                <div class="control is-readonly">
+                  <span class="control-icon"><svg width="18" height="18"><use href="#ico-search" /></svg></span>
+                  <input id="f-id" type="text" value="VariableCollectionId:75:116" readonly />
+                </div>
+                <p class="placeholder-note">
+                  <span class="placeholder-icon"><svg width="14" height="14"><use href="#ico-info" /></svg></span>
+                  Read-only fields use the <code>disabled-alt</code> surface.
+                </p>
+              </div>
+
+              <div class="hero-actions">
+                <button class="btn btn-accent" type="submit">Create library</button>
+                <button class="btn btn-ghost" type="button">Import instead</button>
+                <button class="btn" type="button" disabled>Publish</button>
+              </div>
+            </form>
+
+            <aside class="legacy">
+              <h3>Legacy palette — <code>colors.*</code></h3>
+              <p>
+                A second, self-contained collection lives in the same file. It predates the alias
+                layer and shares nothing with it. This card is styled exclusively from its nine
+                tokens, so you can see the two systems side by side.
+              </p>
+              <div class="legacy-swatches">
+                <div class="legacy-swatch legacy-primary"><b></b>primary<br /><code>#0066ff</code></div>
+                <div class="legacy-swatch legacy-secondary"><b></b>secondary<br /><code>#6b7280</code></div>
+                <div class="legacy-swatch legacy-success"><b></b>success<br /><code>#10b981</code></div>
+                <div class="legacy-swatch legacy-warning"><b></b>warning<br /><code>#f59e0b</code></div>
+                <div class="legacy-swatch legacy-error"><b></b>error<br /><code>#ef4444</code></div>
+              </div>
+              <button class="legacy-cta" type="button">Migrate to the alias layer</button>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- --------------------------------------------------------- Pricing -->
+      <section class="section" id="pricing">
+        <div class="shell">
+          <div class="section-head">
+            <span class="eyebrow">Pricing</span>
+            <h2>Priced per library, not per seat</h2>
+            <p>Everyone who builds against your tokens should be able to read them.</p>
+          </div>
+
+          <div class="plans">
+            <article class="plan">
+              <p class="plan-name">Solo</p>
+              <p class="plan-price">$0<span> / month</span></p>
+              <p class="plan-desc">One library, public consumers, community support.</p>
+              <ul>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> 1 token library</li>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> CSS &amp; JSON output</li>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> Alias resolution</li>
+                <li class="is-off"><svg width="16" height="16"><use href="#ico-error" /></svg> Drift checks in CI</li>
+              </ul>
+              <a class="btn btn-outline" href="#cta">Start free</a>
+            </article>
+
+            <article class="plan plan-featured">
+              <span class="ribbon">Most picked</span>
+              <p class="plan-name">Studio</p>
+              <p class="plan-price">$96<span> / month</span></p>
+              <p class="plan-desc">Unlimited private libraries with review gates and release diffs.</p>
+              <ul>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> Unlimited libraries</li>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> Drift checks in CI</li>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> Release diffs &amp; rollback</li>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> Swift, Kotlin, Tailwind output</li>
+              </ul>
+              <a class="btn btn-dark" href="#cta">Start 14-day trial</a>
+            </article>
+
+            <article class="plan">
+              <p class="plan-name">Enterprise</p>
+              <p class="plan-price">Custom</p>
+              <p class="plan-desc">SSO, audit trails, and a shared multi-brand alias graph.</p>
+              <ul>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> Everything in Studio</li>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> SAML &amp; SCIM</li>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> Multi-brand modes</li>
+                <li><svg width="16" height="16"><use href="#ico-check" /></svg> Dedicated review</li>
+              </ul>
+              <a class="btn btn-outline" href="#cta">Talk to us</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------- Quote -->
+      <div class="quote-band">
+        <div class="shell">
+          <blockquote>
+            <q>
+              We had four definitions of “disabled” across three apps. Meridian collapsed them
+              into one token and the argument simply stopped happening.
+            </q>
+            <div class="quote-attrib">
+              <span class="avatar">RA</span>
+              <div>
+                <cite>Rue Adeyemi</cite>
+                <small>Design systems lead, Kestrel</small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- ------------------------------------------------------------- CTA -->
+      <section class="cta" id="cta">
+        <div class="shell">
+          <h2>Point it at a Figma library. Get a build.</h2>
+          <p>
+            Connect a collection and Meridian emits resolved CSS, JSON, and platform bindings on
+            every publish — with a diff you can actually review.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="#platform">
+              Connect a library
+              <svg width="16" height="16" aria-hidden="true"><use href="#ico-arrow" /></svg>
+            </a>
+            <a class="btn btn-ghost" href="#tokens">Read the token reference</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------- Token reference -->
+      <section class="reference" id="tokens">
+        <div class="shell">
+          <div class="section-head">
+            <span class="eyebrow">Appendix</span>
+            <h2>The complete token set</h2>
+            <p>
+              Generated at build time from <code>sample-tokens.json</code>, so this list cannot
+              drift from the file. Every swatch is painted by its own custom property.
+            </p>
+          </div>
+
+          <div class="stat-row" id="stats"></div>
+
+          <details class="explainer">
+            <summary>How the aliases were resolved</summary>
+            <p>
+              The <code>bg</code>, <code>text</code>, <code>icon</code>, and <code>border</code>
+              layers store their value as a Figma <code>VARIABLE_ALIAS</code> — for example
+              <code>{ "id": "VariableID:75:117", "type": "VARIABLE_ALIAS" }</code> — and the export
+              does not include the table those ids point at. The referenced ids form one contiguous
+              run, <code>75:117</code> through <code>75:159</code>, which is exactly 43 slots, and
+              <code>primitive.*</code> contains exactly 43 colours. Laying the primitive ramps into
+              that run in the order neutral, brown, amber, blue, green, red, yellow makes every
+              semantic name land on a sensible shade: <code>text.primary</code> resolves to
+              <code>neutral.600</code>, <code>text.disabled</code> to <code>neutral.300</code>, and
+              each status family lands on its own hue with a clean tint → solid → hover progression
+              (<code>bg.error-primary</code> → <code>red.100</code>, its hover → <code>red.200</code>,
+              <code>bg.error-secondary</code> → <code>red.300</code>, its hover → <code>red.400</code>).
+              The nine slots no semantic token references are the entire amber ramp plus four odd
+              shades, which is what an unused legacy ramp looks like.
+              <strong>This ordering is inferred, not stated in the file</strong> — if you can export
+              the variable table from Figma, check it against
+              <code>ALIAS_RAMP_ORDER</code> in <code>build.mjs</code>.
+            </p>
+          </details>
+
+          <div id="groups"></div>
+
+          <p class="footnote" id="footnote"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <span>Meridian — a fictional product, used here to exercise a real token set.</span>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://github.com/anujprajapatiii/brand-tokens-v1">Repository</a>
+          <a href="tokens.css">tokens.css</a>
+          <a href="#tokens">Token reference</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="token-data.js"></script>
+    <script src="reference.js"></script>
+  </body>
+</html>
